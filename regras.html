@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Projeto Rachão</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            background-image: url('PAPEL\ DE\ PAREDE\ PC-RACHA\ DOS\ CRIAx.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* Cobrir toda a tela */
+            background-position: center;
+            background-attachment: fixed;
+            /* Fixar a posição do papel de parede */
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            /* Definindo uma fonte padrão */
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgb(255, 160, 0);
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            /* Coloca o menu acima de outros elementos da página */
+        }
+
+        .menu h1 {
+            margin: 0;
+            font-family: 'Impact', sans-serif;
+            /* Fonte mais esportiva */
+            color: white;
+            font-weight: 500;
+            text-align: center;
+            /* Centralizar o texto */
+            font-size: 24px;
+            /* Tamanho da fonte ajustado */
+        }
+
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .menu li {
+            margin-right: 20px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            /* Tamanho da fonte ajustado */
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width: 600px) {
+            .menu {
+                flex-direction: column;
+                align-items: flex-end;
+                padding: 10px;
+                /* Adiciona mais espaço ao redor do menu */
+            }
+
+            .menu h1 {
+                margin-bottom: 10px;
+                text-align: right;
+                /* Alinhar o texto à direita em telas menores */
+            }
+
+            .menu li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+        #logo {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            top: 50%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .logo {
+            position: absolute;
+            /* Definindo o posicionamento absoluto para a logo */
+            top: 50%;
+            /* Posicionando a logo no meio verticalmente */
+            left: 50%;
+            /* Posicionando a logo no meio horizontalmente */
+            transform: translate(-50%, -50%);
+            /* Centralizando a logo */
+            z-index: 1;
+            /* Definindo a camada da logo */
+        }
+
+        .rules {
+            max-width: 600px;
+            top: 100px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            /* Definindo o posicionamento relativo para as regras */
+            z-index: 2;
+            /* Definindo uma camada acima da logo */
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            /* Definindo o posicionamento relativo para as informações de contato */
+            z-index: 2;
+            /* Definindo uma camada acima da logo */
+        }
+    </style>
+</head>
+
+<body>
+    <audio id="meuAudio">
+        <source src="UEFA.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <div class="menu">
+        <a href="index.html">
+            <h1> RACHA DOS CRIAS ⚽ </h1>
+        </a>
+        <ul>
+            <li><a href="regras.html">Regras</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="amistoso.html">Marcar Amistoso</a></li>
+            <li><a href="#agenda">Agenda</a></li>
+            <li onclick="iniciarSom()"><a href="#som">Tocar Som</a></li>
+        </ul>
+    </div>
+    <div class="rules">
+        <h2>Regras do Jogo:</h2>
+        <ul>
+            <li>⚽ Os jogos acontecerão todas as terças-feiras das 20h às 21h30.</li>
+            <li>📄 Os membros do grupo terão prioridade na participação nos jogos. Isso significa que, caso o número de
+                jogadores exceda a capacidade da partida, os membros terão preferência em relação a convidados externos.
+            </li>
+            <li>👟 Recomenda-se que os jogadores estejam calçados durante as partidas.</li>
+        </ul>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

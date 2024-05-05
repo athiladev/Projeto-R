@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Projeto Rachão</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            background-image: url('PAPEL\ DE\ PAREDE\ PC-RACHA\ DOS\ CRIA.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* Cobrir toda a tela */
+            background-position: center;
+            background-attachment: fixed;
+            /* Fixar a posição do papel de parede */
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            /* Definindo uma fonte padrão */
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgb(255, 160, 0);
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            /* Coloca o menu acima de outros elementos da página */
+        }
+
+        .menu h1 {
+            margin: 0;
+            font-family: 'Impact', sans-serif;
+            /* Fonte mais esportiva */
+            color: white;
+            font-weight: 500;
+            text-align: center;
+            /* Centralizar o texto */
+            font-size: 24px;
+            /* Tamanho da fonte ajustado */
+        }
+
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .menu li {
+            margin-right: 20px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            /* Tamanho da fonte ajustado */
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width: 600px) {
+            .menu {
+                flex-direction: column;
+                align-items: flex-end;
+                padding: 10px;
+                /* Adiciona mais espaço ao redor do menu */
+            }
+
+            .menu h1 {
+                margin-bottom: 10px;
+                text-align: right;
+                /* Alinhar o texto à direita em telas menores */
+            }
+
+            .menu li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+        #logo {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            top: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <audio id="meuAudio">
+        <source src="UEFA.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <div class="menu">
+        <a href="index.html">
+            <h1> RACHA DOS CRIAS ⚽ </h1>
+        </a>
+        <ul>
+            <li><a href="regras.html">Regras</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="amistoso.html">Marcar Amistoso</a></li>
+            <li><a href="agenda.html">Agenda</a></li>
+            <li onclick="iniciarSom()"><a href="#som">Tocar Som</a></li>
+        </ul>
+    </div>
+    <img src="logo.png" id="logo">
+    <script src="script.js"></script>
+</body>
+
+</html>
